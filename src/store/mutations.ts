@@ -1,0 +1,1 @@
+export const  ARMAZENA_POSTS = "ARMAZENA_POSTS"

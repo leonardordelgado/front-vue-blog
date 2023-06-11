@@ -1,0 +1,1 @@
+export const OBTEM_POSTS = "OBTEM_POSTS"
