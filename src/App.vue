@@ -15,13 +15,16 @@ import { defineComponent } from 'vue';
 import Header from './components/Header.vue'; //Import header 
 import NavBar from './components/NavBar.vue';
 import Footer from './components/Footer.vue';
+
 export default defineComponent({
   name: 'App',
   components: {// informa os components que serao usados na pagina
       Header,
       NavBar,
       Footer
-  }
+  },
+  
+ 
 
 });
 </script>
