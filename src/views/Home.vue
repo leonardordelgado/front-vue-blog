@@ -13,18 +13,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { computed, defineComponent, ref} from 'vue';
 import Apresentacao from './Home/Apresentacao.vue';
 import Habilidades from './Home/Habilidades.vue'
 import CarouselPost from './Home/carousels/CarouselPost.vue';
+import { useStore } from '@/store';
 export default defineComponent({
     name: 'Home-curriculo',
     components:{
         Apresentacao,
         CarouselPost,
         Habilidades
-        
-    }
+    },
 })
 </script>
 <style scoped>

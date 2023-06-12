@@ -11,7 +11,7 @@
         </div>
         <div class="social">
             <p>Acompanhe-me:
-                <a href="" class="link">
+                <a href="https://www.instagram.com/desenvolvedor.l.delgado/" class="link" target="_blank">
                     <i class="bi bi-instagram"></i>
                 </a>
                 <a href="https://www.linkedin.com/in/leonardo-resende-bbb670204/" class="link" target="_blank">

@@ -1,6 +1,6 @@
 <template>
-       <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
-        <slide v-for="post  in posts" :key="post._id" class="slide" >
+    <Carousel id="gallery" :items-to-show="1" :wrap-around="false" v-model="currentSlide">
+        <slide v-for="post  in posts" :key="post._id" class="slide">
             <div class="flip-card">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
@@ -30,27 +30,22 @@
         </template>
     </carousel>
 
-    <Carousel
-    id="thumbnails"
-    :items-to-show="1"
-    v-model="currentSlide"
-    :wrap-around="false"
-    ref="carousel">
-    <Slide slide v-for="(post, index)  in posts" :key="post._id">
-        <div class="flip-card carousel__item" @click="slideTo(index)">
+    <Carousel id="thumbnails" :items-to-show="1" v-model="currentSlide" :wrap-around="false" ref="carousel">
+        <Slide slide v-for="(post, index)  in posts" :key="post._id">
+            <div class="flip-card carousel__item" @click="slideTo(index)">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <p class="title">{{ post.titulo }}</p>
-                        <button class="bt button is-white">Veja mais</button>
+                        <RouterLink
+                            :to="{ name: 'poster-completo', params: {id: post._id}}" >
+                            <input type="submit" class="bt button is-white">
+                        </RouterLink>
                     </div>
-                    
+
                 </div>
             </div>
-    </Slide>
-  </Carousel>
-
-
-    
+        </Slide>
+    </Carousel>
 </template>
 
 <script lang="ts">
@@ -68,14 +63,14 @@ export default defineComponent({
         Slide,
         Navigation
     },
-  data: () => ({
-    currentSlide: 0,
-  }),
-  methods: {
-    slideTo(val: number) {
-      this.currentSlide = val
+    data: () => ({
+        currentSlide: 0,
+    }),
+    methods: {
+        slideTo(val: number) {
+            this.currentSlide = val
+        }
     },
-  },
     setup() {
         const store = useStore()
         store.dispatch(OBTEM_POSTS)
@@ -100,25 +95,30 @@ export default defineComponent({
     font-family: 'Source Sans Pro', sans-serif;
 
 }
+
 #thumbnails .flip-card {
     background-color: transparent;
     width: 15%;
     height: 100px;
     font-family: 'Source Sans Pro', sans-serif;
     margin-top: -0rem;
-} 
+}
+
 #thumbnails .flip-card:hover .flip-card-inner {
     transform: none;
 }
+
 #thumbnails .bt {
-margin: auto;
-margin-left: auto;
-margin-right: auto;
+    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
 
 }
-#thumbnails .title{
+
+#thumbnails .title {
     margin-bottom: 1px;
 }
+
 .carousel-arrow {
     z-index: 3;
     display: block;
@@ -138,22 +138,28 @@ margin-right: auto;
     -webkit-transition: background-size 0.15s ease-out;
     transition: background-size 0.15s ease-out;
 }
-.carousel-arrow:hover, .carousel-arrow:focus {
+
+.carousel-arrow:hover,
+.carousel-arrow:focus {
     background-size: 22px 22px;
 }
+
 .carousel-arrow-next {
     right: 20px;
 }
+
 .carousel-arrow-prev {
     left: 20px;
     -webkit-transform: rotateZ(180deg);
     -ms-transform: rotate(180deg);
     transform: rotateZ(180deg);
 }
+
 .slide {
     width: 15%;
 
 }
+
 .title {
     font-size: 1.5em;
     font-weight: 900;
@@ -161,6 +167,7 @@ margin-right: auto;
     margin: 0;
     color: white;
 }
+
 .text {
     height: 100%;
     display: block;
@@ -169,6 +176,7 @@ margin-right: auto;
     color: white;
     overflow: auto;
 }
+
 .bt {
 
     margin-top: -10px;
@@ -177,6 +185,7 @@ margin-right: auto;
     margin-right: auto;
 
 }
+
 .flip-card-inner {
     position: relative;
     width: 100%;
@@ -185,9 +194,11 @@ margin-right: auto;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
+
 .flip-card:hover .flip-card-inner {
     transform: rotateY(-180deg);
 }
+
 .flip-card-front,
 .flip-card-back {
     box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
@@ -202,57 +213,68 @@ margin-right: auto;
     border: 0.5px solid #ffffff;
     border-radius: 0.3em;
 }
+
 .flip-card-front {
     background: var(--darkgray);
     color: white;
 }
+
 .flip-card-back {
     background: var(--darkgray);
     color: white;
     transform: rotateY(-180deg);
 }
+
 .text::-webkit-scrollbar-thumb {
     border-radius: 10px;
     background-color: white;
 }
+
 .text::-webkit-scrollbar-track {
 
     background-color: transparent;
     border-radius: 10px;
 }
+
 .text::-webkit-scrollbar {
     width: 10px;
     background-color: transparent;
 }
-@media (max-width: 600px){   
+
+@media (max-width: 600px) {
     .flip-card {
-    width: 65%;
+        width: 65%;
     }
+
     .carousel-arrow-next {
-    right: 0px;
+        right: 0px;
     }
+
     .carousel-arrow-prev {
-    left: 0px;
+        left: 0px;
     }
+
     #thumbnails .flip-card {
-    background-color: transparent;
-    width: 50%;
-    height: 100px;
-    font-family: 'Source Sans Pro', sans-serif;
-    margin-top: -0rem;
-    } 
-    #thumbnails .flip-card:hover .flip-card-inner {
-    transform: none;
+        background-color: transparent;
+        width: 50%;
+        height: 100px;
+        font-family: 'Source Sans Pro', sans-serif;
+        margin-top: -0rem;
     }
+
+    #thumbnails .flip-card:hover .flip-card-inner {
+        transform: none;
+    }
+
     #thumbnails .bt {
-    margin: auto;
-    margin-left: auto;
-    margin-right: auto;
+        margin: auto;
+        margin-left: auto;
+        margin-right: auto;
 
     }
-    #thumbnails .title{
+
+    #thumbnails .title {
         margin-bottom: 1px;
     }
-    
- }
-</style>
+
+}</style>

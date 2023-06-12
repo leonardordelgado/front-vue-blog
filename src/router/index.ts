@@ -3,6 +3,7 @@ import Home from '@/views/Home.vue'
 import Contatos from '@/views/Contatos.vue'
 import Projetos from '@/views/Projetos.vue'
 import Certificados from '@/views/Certificados.vue'
+import PostCompleto from '@/views/Home/PostCompleto.vue'
 const rotas: RouteRecordRaw []=[
     {
         path:'/',
@@ -27,6 +28,11 @@ const rotas: RouteRecordRaw []=[
                 path:'certificados',
                 name: 'Certificados',
                 component: Certificados
+            },
+            {
+                path:'poster/:id',
+                name: 'poster-completo',
+                component: PostCompleto
             }
         ]
     }
