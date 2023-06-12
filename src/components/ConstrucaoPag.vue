@@ -27,16 +27,19 @@
         </div>
     </div>
     <div class="footer">
-            <div class="title mod">
-                Pagina em Construção
-            </div>
-            <div class="title">
-                Acesse o Instagram ♥
-                <div class="sub">
-                    <a href="https://instagram.com/css_informatica" target=”_blank”>instagram: css_informatica</a>
-                </div>
+        <div class="title mod">
+            Pagina em Construção 
+        </div>
+        <div class="title">
+            Acesse o Instagram ♥
+            <div class="sub">
+                <a href="https://www.instagram.com/desenvolvedor.l.delgado/" target=”_blank”>
+                    desenvolvedor.l.delgado
+                    <i class="bi bi-instagram"></i>
+                </a>
             </div>
         </div>
+    </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
@@ -49,34 +52,30 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css?family=Amatic+SC');
 
 .footer {
-    color: white;
     font-size: 2rem;
-    margin-top: -15rem;
-    
+    z-index: 1;
     background: transparent;
+    margin-bottom: 30px;
 }
-
 .footer .title {
     font-family: 'Amatic SC';
     text-align: center;
+    color:white;
 }
-
 .footer .mod {
     color: #dc8e3e;
 }
-
 .footer .sub {
     display: flex;
     justify-content: space-around;
     font-size: 1rem;
     font-family: 'Amatic SC';
-}
 
+}
 .footer .sub a {
-    color: pink;
+    color:white;
     text-decoration: none;
 }
-
 .footer .sub a:hover {
     color: white;
 }
@@ -90,10 +89,11 @@ export default defineComponent({
     top: 0;
     bottom: 0;
     width: 26rem;
-    border-radius: 26rem;
+    border-radius: 27rem;
     overflow: hidden;
-    height: 87vh;
+    height: 55vh;
     position: relative;
+    z-index: 0;
 }
 
 .objects_computer {
@@ -107,7 +107,6 @@ export default defineComponent({
     border-radius: 0.6rem 0.6rem 0 0;
     box-shadow: inset -6px 1px darkgrey;
 }
-
 .objects_computer:after {
     content: '';
     position: absolute;
@@ -128,7 +127,6 @@ export default defineComponent({
     left: 2rem;
     box-shadow: 0px -3px #582714;
 }
-
 .objects_table:before {
     content: '';
     width: 19rem;
@@ -145,19 +143,18 @@ export default defineComponent({
     position: absolute;
     width: 2.4rem;
     top: 17.2rem;
-    background: #e67da4;
+    background: #ee4040;
     left: 16.8rem;
     height: 3rem;
     border-radius: 0.3rem 0.3rem 0 0;
     z-index: 55;
-    box-shadow: -2px 0px #f36b9d;
+    box-shadow: -2px 0px #ee4040;
 }
-
 .objects_cup:after {
     content: '';
     width: 2rem;
     height: 2rem;
-    background: #e67da4;
+    background: #ee4040;
     position: absolute;
     top: 0.7rem;
     left: 0.4rem;
@@ -170,11 +167,10 @@ export default defineComponent({
     content: '';
     position: absolute;
     width: 1rem;
-    height: 1.3rem;
-    border: 4px solid #f36b9d;
-    left: 1.6rem;
+    height: 1.9rem;
+    border: 4px solid #ee4040;
+    left: 2.2rem;
     top: 0.8rem;
-    border-radius: 1rem;
     z-index: 1;
 }
 
@@ -195,8 +191,7 @@ export default defineComponent({
     width: 5.4rem;
     height: 6.8rem;
     left: 1rem;
-    top: 6.7rem;
-    background-color: rgba(99, 102, 115, 0.709804);
+    background-color: rgba(15, 38, 141, 0.71);
     border-radius: 0.6rem;
     box-shadow: 1px 3px 5px #000 52;
     animation: float 2s infinite;
@@ -207,7 +202,8 @@ export default defineComponent({
 }
 
 .box_1 div {
-    background: #e67da4;
+    margin-top: -10px;
+    background: #f00707;
     position: absolute;
     border-radius: 1rem;
 }
@@ -245,7 +241,7 @@ export default defineComponent({
     height: 0.3rem;
     top: 2.7rem;
     left: 2.7rem;
-    box-shadow: 1rem 0px #e67da4, 1.8rem 0px #e67da4, -0.5rem 11px #e67da4;
+    box-shadow: 1rem 0px #f50707, 1.8rem 0px #fd0909, -0.5rem 11px #f80000;
 }
 
 .box_1 :nth-child(6) {
@@ -253,7 +249,7 @@ export default defineComponent({
     height: 0.3rem;
     top: 4.1rem;
     left: 1.2rem;
-    box-shadow: 1rem 22px #e67da4, 0rem 43px #e67da4;
+    box-shadow: 1rem 22px #f90000, 0rem 43px #fb0000;
 }
 
 .box_1 :nth-child(7) {
@@ -261,7 +257,7 @@ export default defineComponent({
     height: 0.3rem;
     top: 4.8rem;
     left: 1.7rem;
-    box-shadow: 0rem 22px #e67da4;
+    box-shadow: 0rem 22px #ff0000;
 }
 
 .box_2 {
@@ -270,7 +266,7 @@ export default defineComponent({
     height: 4.4rem;
     left: 7.3rem;
     top: 1.7rem;
-    background-color: rgba(99, 102, 115, 0.709804);
+    background-color: rgba(15, 38, 141, 0.71);
     border-radius: 0.6rem;
     box-shadow: 1px 3px 5px #000 52;
     animation: float2 2s 1s infinite;
@@ -279,49 +275,51 @@ export default defineComponent({
 .box_2 div {
     position: absolute;
     border-radius: 1rem;
-    background: #e67da4;
+    background: #f60000;
+    margin-top: 10px;
+    
 }
 
 .box_2 :nth-child(1) {
     transform: rotate(45deg);
     width: 0.2rem;
     height: 0.6rem;
-    left: 0.8rem;
+    left: 1rem;
     top: -0.4rem;
-    box-shadow: 1.1rem 0.5rem #e67da4, 2.5rem -0.5rem #e67da4, 6rem 0.5rem #e67da4;
+    box-shadow: 1.1rem 0.5rem #fb0000, 2.5rem -0.5rem #f90000, 5.5rem -.7rem #ff0000;
 }
 
 .box_2 :nth-child(2) {
     transform: rotate(133deg);
     width: 0.2rem;
     height: 0.6rem;
-    left: 0.8rem;
+    left: 1rem;
     top: 0rem;
-    box-shadow: 0.5rem -1.1rem #e67da4, -0.9rem -2rem #e67da4, 0.2rem -5.5rem #e67da4;
+    box-shadow: 0.5rem -1.1rem #ff025e, -0.9rem -2rem #ff005d, -1.1rem -5rem #f70101;
 }
 
 .box_2:after {
     content: '';
     width: 1rem;
-    height: 0.2rem;
-    background: #e67da4;
+    height: 0.3rem;
+    background: #ff005d;
     position: absolute;
     border-radius: 6rem;
-    top: 2.4rem;
-    left: 2.2rem;
+    top: 2.6rem;
+    left: 2.4rem;
 }
 
 .box_2:before {
     content: '';
     width: 0.8rem;
     height: 0.2rem;
-    background: #e67da4;
+    background: #ff0000;
     position: absolute;
     border-radius: 6rem;
-    top: 1.1rem;
+    top: 1.8rem;
     left: 2rem;
     transform: rotate(-68deg);
-    box-shadow: -2.2rem 2.8rem #e67da4;
+    box-shadow: -.7rem 3rem #fc0000;
 }
 
 .box_3 {
@@ -330,7 +328,7 @@ export default defineComponent({
     height: 4.2rem;
     left: 7.3rem;
     top: 7.4rem;
-    background-color: rgba(99, 102, 115, 0.709804);
+    background-color: rgba(15, 38, 141, 0.71);
     border-radius: 0.6rem;
     box-shadow: 1px 3px 5px #000 52;
     animation: float3 2.5s infinite;
@@ -339,14 +337,14 @@ export default defineComponent({
 .box_3:after {
     content: '';
     position: absolute;
-    background: #e67da4;
+    background: #ff0000;
     width: 0.8rem;
     height: 0.2rem;
     transform: rotate(-64deg);
     border-radius: 5rem;
     top: 0.8rem;
     left: 0.5rem;
-    box-shadow: 0.2rem 0.5rem #e67da4;
+    box-shadow: 0.2rem 0.5rem #f70000;
 }
 
 .smoke {

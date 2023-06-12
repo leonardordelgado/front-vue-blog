@@ -115,14 +115,12 @@ h4, h2 {
 
 .contatos-links {
     background: rgba(169, 169, 170, 0.753);
-    width: 25%;
+    width: 70%;
     height: auto;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
    display: flex;
    justify-content: center;
-   
-
 }
 
 .butons {
@@ -144,7 +142,6 @@ h4, h2 {
     overflow: hidden;
     text-align: center;
     margin-left: -1rem;
-    
 }
 
 .butons li p {
@@ -153,81 +150,106 @@ h4, h2 {
     font-family: Poppins;
     font-weight: 700;
     color: white;
-    margin-left: 1rem;
+    margin-left: 10px;
+    margin-right: -10px;
     margin-top: .6rem;
+    width: 90px;
 }
 
 .butons i {
-    width: 100%px;
+    width: 30px;
     float: right;
-    margin-right: 1rem;
+    margin-left:0px;
+    margin-right:10px;
     margin-top: .5rem;
     font-size: 1.5em;
     color: white;
+}
+.butons  a {
+    text-decoration: none;
 }
 
 @media (max-width:600px) {
     .contatos {
         width: 100%;
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: -15rem;
-        margin-bottom: 20rem;
-        height: 120vh;
-
+        display: block;
+        height: auto;
     }
     .infor img {
-        margin-top:0;
+        margin-top:30px;
     }
     .container-contatos {
-        margin-top: 5rem;
-        height: 70vh;
-        width: 110vh;
+        margin: 1rem;
+        height: auto;
+        width: auto;
         overflow: inherit;
+        display: block;
     }
 
     .infor {
-        margin-right: 2px;
         background: rgba(169, 169, 170, 0.753);
         float: none;
-        width: 100%;
-        height: 60vh;
+        width: auto;
+        height: auto;
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
         border-bottom-left-radius: inherit;
         text-align: center;
+        padding: 5px;
     }
 
     .contatos-links {
-        background: rgba(169, 169, 170, 0.753);
         float: none;
-        width: 100%;
-        height: 60vh;
+        width: auto;
+        height: auto;
         border-top-right-radius: inherit;
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
-        
+        margin-right: 2px;
+        margin-top: -9px;       
+        display: block;
     }
 
     .butons {
         list-style-type: none;
-        gap: 2rem;
+        gap: 1.5rem;
         flex-direction: column;
         flex-wrap: nowrap;
         cursor: default;
-        display: flex;
-        margin-top: 3px;
+        display: grid;
+        margin-top: 10px;
+        width: 210px;
     }
 
     .butons li {
-        width: 80%;
-        height: 50px;
-        background: var(--darkgray);
-        border-radius: 30px;
-        overflow: hidden;
-        text-align: center;
-        margin-left: 2rem;
-        margin-top: 2rem;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        height: auto;
+        overflow:inherit;
+        display: flex;
+        text-align: inherit;
     }
-    
-}</style>
+
+
+    .butons li p {
+        font-size: 20px;
+        float: left;
+        font-family: Poppins;
+        font-weight: 700;
+        color: white;
+        margin-left: 1rem;
+        margin-top: .6rem;
+        width: 100px;
+    }
+
+    .butons i {
+        width: 30px;
+        float: right;
+        margin-left: 30px;
+        margin-right: 0rem;
+        margin-top: .8rem;
+        font-size: 1.5em;
+        color: white;
+    }    
+}
+</style>

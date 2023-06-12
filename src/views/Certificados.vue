@@ -1,15 +1,18 @@
 <template>
     <div >
-        <h1>Certificados</h1>
+        <ConstrucaoPag />
     </div>
     
 </template>
 
 <script lang="ts">
     import { defineComponent } from 'vue';
-
+    import ConstrucaoPag from '@/components/ConstrucaoPag.vue';
     export default defineComponent({
-        name: 'certificados-curriculo'
+        name: 'certificados-curriculo',
+        components:{
+            ConstrucaoPag
+        }
     })
 </script>
 <style scoped>
