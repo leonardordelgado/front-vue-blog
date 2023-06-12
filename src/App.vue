@@ -1,6 +1,6 @@
 <template>
   
-    <header class="header"><Header /></header>
+    <header class="header"><Header /> </header>
     <main class="main">
       <NavBar />
       <RouterView>
