@@ -1,6 +1,6 @@
 import axios, {AxiosInstance} from "axios";
 
 const clientHTTPS: AxiosInstance = axios.create({
-    baseURL: "https://app-back.herokuapp.com/"
+    baseURL: "https://www.api.leonardodelgado.com/"
 });
 export default clientHTTPS;
